@@ -19,7 +19,6 @@ def authentication():
 if __name__ == '__main__':
 
     context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-    # context.load_cert_chain(certfile='outro.pem', keyfile='outro.key')
     context.load_cert_chain(certfile='server_cert.pem', keyfile='server.key')
     context.load_verify_locations(cafile='client_cert.pem')
     context.verify_mode = ssl.CERT_REQUIRED
